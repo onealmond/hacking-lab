@@ -25,8 +25,7 @@ local_c = local_20 << 2 | local_c;
 The lower two bits represent high frequency, the higher two bits represent low freqency.
 
 Take a look at the switch block
-
-
+```
 high = [1209, 1336, 1477, 1633]
 low = [697, 770, 852, 941]
 
@@ -39,6 +38,6 @@ position 5: local_c should be 8(0b1000), (low[0b10],high[0b00]) = (852Hz,1209Hz)
 position 6: local_c should be 1(0b0001), (low[0b00],high[0b01]) = (697Hz,1336Hz) = 2
 position 7: local_c should be 0xd(0b1101), (low[0b11],high[0b01]) = (941Hz,1336Hz) = 0
 position 8: 0 is invalid, make it 1
-
+```
 
 So the key sequence is 859687201.
