@@ -25,4 +25,4 @@
 - [rot13](picoctf-2019/rot13/writeup.md)
 - [the numbers](picoctf-2019/the_numbers/writeup.md)
 - [rop32](picoctf-2019/rop32/shellcode.py)
-- [slippery-shllcode](picoctf-2019/slippery-shellcode/writeup.md)
+- [slippery-shellcode](picoctf-2019/slippery-shellcode/writeup.md)
