@@ -1,14 +1,14 @@
 # hacking-lab
 ---
 
-# google ctf 2019
+# Google CTF 2019
 - [jit](google-ctf-2019/jit/shellcode.py)
 - [cryptoqkd](google-ctf-2019/cryptoqkd.web.ctfcompetition.com/post.py)
 - [malvertising](google-ctf-2019/malvertising/writeup.md)
 - [MicroServiceDaemonOS](google-ctf-2019/MicroServiceDaemonOS/shellcode.py)
 - [dialtone](google-ctf-2019/dialtone/writeup.md)
 
-# picoctf 2019
+# PicoCTF 2019
 - [c0rrypt](picoctf-2019/c0rrupt/writeup.md)
 - [CanaRy](picoctf-2019/CanaRy/shellcode.py)
 - [overflow-0](picoctf-2019/overflow-0/shellcode.py)
@@ -26,6 +26,17 @@
 - [the numbers](picoctf-2019/the_numbers/writeup.md)
 - [rop32](picoctf-2019/rop32/shellcode.py)
 - [slippery-shellcode](picoctf-2019/slippery-shellcode/writeup.md)
+- [messy-malloc](picoctf-2019/messy-malloc/writeup.md)
+- [leap-frog](picoctf-2019/leap-frog/writeup.md)
+- [stringzz](picoctf-2019/stringzz/writeup.md)
+- [GoT](picoctf-2019/GoT/writeup.md)
+- [pointy](picoctf-2019/pointy/writeup.md)
+- [rop64](picoctf-2019/rop64/shellcode.py)
+- [AfterLife](picoctf-2019/AfterLife/shellcode.py)
+- [L1im1tL335](picoctf-2019/L1im1tL335/writeup.md)
+- [SecondLife](picoctf-2019/SecondLife/shellcode.py)
+- [Heap Overflow](picoctf-2019/HeapOverflow/shellcode.py)
+- [Cereal Hacker 1](picoctf-2019/cereal-hacker1/writeup.md)
 
 # Hacker101 CTF
 - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)

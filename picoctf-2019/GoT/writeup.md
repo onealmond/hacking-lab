@@ -1,0 +1,1 @@
+The program allow user change value stored in address. We want to call the ``win`` function to print the flag. We can change an address in GOT table to address of ``win``, the selected one should be called later, lets' try change address of ``exit`` function to address of ``win``, when fake ``exit`` being called the flag is printed.
