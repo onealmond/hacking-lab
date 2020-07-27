@@ -37,6 +37,9 @@
 - [SecondLife](picoctf-2019/SecondLife/shellcode.py)
 - [Heap Overflow](picoctf-2019/HeapOverflow/shellcode.py)
 - [Cereal Hacker 1](picoctf-2019/cereal-hacker1/writeup.md)
+- [Cereal Hacker 2](picoctf-2019/cereal-hacker2/writeup.md)
+- [Irish-Name-Repo 1](picoctf-2019/Irish-Name-Repo-1/writeup.md)
+- [Empire 1](picoctf-2019/Empire1)
 
 # Hacker101 CTF
 - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)
