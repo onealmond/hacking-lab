@@ -52,3 +52,9 @@
 - [Photo Gallery](hacker101-ctf/photo_gallery/writeup.md)
 - [Postbook](hacker101-ctf/postbook/writeup.md)
 - [Cody's First Blog](hacker101-ctf/cody'sFirstBlog/writeup.md)
+
+# PicoCTF 2020
+- [Guessing Game2](picoctf-2020/guessing-game2/writeup.md)
+- [Web Gauntlet](picoctf-2020/web-gauntlet/writeup.md)
+- [OTP Implementation](picoctf-2020/otp-implementation/writeup.md)
+- [Guessing Game1](picoctf-2020/guessing-game1/writeup.md)
