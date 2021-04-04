@@ -1,14 +1,14 @@
 # hacking-lab
 ---
 
-# Google CTF 2019
+## Google CTF 2019
 - [jit](google-ctf-2019/jit/shellcode.py)
 - [cryptoqkd](google-ctf-2019/cryptoqkd.web.ctfcompetition.com/post.py)
 - [malvertising](google-ctf-2019/malvertising/writeup.md)
 - [MicroServiceDaemonOS](google-ctf-2019/MicroServiceDaemonOS/shellcode.py)
 - [dialtone](google-ctf-2019/dialtone/writeup.md)
 
-# PicoCTF 2019
+## PicoCTF 2019
 - [c0rrypt](picoctf-2019/c0rrupt/writeup.md)
 - [CanaRy](picoctf-2019/CanaRy/shellcode.py)
 - [overflow-0](picoctf-2019/overflow-0/shellcode.py)
@@ -41,20 +41,26 @@
 - [Irish-Name-Repo 1](picoctf-2019/Irish-Name-Repo-1/writeup.md)
 - [Empire 1](picoctf-2019/Empire1)
 
-# CTFLearn
+## CTFLearn
 - [Don't Bump Your Head(er)](ctflearn/Don'tBumpYourHeader/writeup.md)
 - [Inj3ction Time](ctflearn/web8/writeup.md)
 - [Calculat3 M3](ctflearn/web7/writeup.md)
 
-# Hacker101 CTF
+## Hacker101 CTF
 - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)
 - [Model E1337 Rolling Code Lock](hacker101-ctf/model_e1337_rolling_code_lock/writeup.md)
 - [Photo Gallery](hacker101-ctf/photo_gallery/writeup.md)
 - [Postbook](hacker101-ctf/postbook/writeup.md)
 - [Cody's First Blog](hacker101-ctf/cody'sFirstBlog/writeup.md)
+- [XSS Playground](hacker101-ctf/XSS-playground/writeup.md)
+- [Grayhatcon](hacker101-ctf/grayhatcon/writeup.md)
 
-# PicoCTF 2020
+## PicoCTF 2020
 - [Guessing Game2](picoctf-2020/guessing-game2/writeup.md)
 - [Web Gauntlet](picoctf-2020/web-gauntlet/writeup.md)
 - [OTP Implementation](picoctf-2020/otp-implementation/writeup.md)
 - [Guessing Game1](picoctf-2020/guessing-game1/writeup.md)
+
+## UMASS 21
+- [Easteregg](umass21/easteregg/writeup.md)
+- [Chains](umass21/chains/writeup.md)
