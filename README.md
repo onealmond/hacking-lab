@@ -61,6 +61,9 @@
 - [OTP Implementation](picoctf-2020/otp-implementation/writeup.md)
 - [Guessing Game1](picoctf-2020/guessing-game1/writeup.md)
 
-## UMASS 21
+## UMassCTF '21
 - [Easteregg](umass21/easteregg/writeup.md)
 - [Chains](umass21/chains/writeup.md)
+- [hermit Part1](umass21/hermit-part1/writeup.md)
+- [PikCha](umass21/PikCha/writeup.md)
+- [Babushka](umass21/babushka/writeup.md)
