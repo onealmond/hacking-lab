@@ -2,11 +2,11 @@
 ---
 
 ## Google CTF 2019
-- [jit](google-ctf-2019/jit/shellcode.py)
-- [cryptoqkd](google-ctf-2019/cryptoqkd.web.ctfcompetition.com/post.py)
-- [malvertising](google-ctf-2019/malvertising/writeup.md)
+- [JIT](google-ctf-2019/jit/shellcode.py)
+- [Cryptoqkd](google-ctf-2019/cryptoqkd.web.ctfcompetition.com/post.py)
+- [Malvertising](google-ctf-2019/malvertising/writeup.md)
 - [MicroServiceDaemonOS](google-ctf-2019/MicroServiceDaemonOS/shellcode.py)
-- [dialtone](google-ctf-2019/dialtone/writeup.md)
+- [Dialtone](google-ctf-2019/dialtone/writeup.md)
 
 ## PicoCTF 2019
 - [c0rrypt](picoctf-2019/c0rrupt/writeup.md)
@@ -39,7 +39,7 @@
 - [Cereal Hacker 1](picoctf-2019/cereal-hacker1/writeup.md)
 - [Cereal Hacker 2](picoctf-2019/cereal-hacker2/writeup.md)
 - [Irish-Name-Repo 1](picoctf-2019/Irish-Name-Repo-1/writeup.md)
-- [Empire 1](picoctf-2019/Empire1)
+- [Empire 1](picoctf-2019/Empire1/writeup.md)
 
 ## CTFLearn
 - [Don't Bump Your Head(er)](ctflearn/Don'tBumpYourHeader/writeup.md)
@@ -64,6 +64,14 @@
 ## UMassCTF '21
 - [Easteregg](umass21/easteregg/writeup.md)
 - [Chains](umass21/chains/writeup.md)
-- [hermit Part1](umass21/hermit-part1/writeup.md)
+- [Hermit Part1](umass21/hermit-part1/writeup.md)
 - [PikCha](umass21/PikCha/writeup.md)
 - [Babushka](umass21/babushka/writeup.md)
+- [Malware](umass21/malware/writeup.md)
+
+## FooBar CTF
+- [Child Rev](foobar-ctf/child_rev/writeup.md)
+
+## Pragyan 2021
+- [Guessing Game](pragyan/guessing-game/writeup.md)
+- [Rusty Rev](pragyan/rusty-rev/writeup.md)
