@@ -1,4 +1,4 @@
-Decompile the program with Ghida, we learned that
+Decompile the program with Ghidra, we learned that
 
 * it return SUCCEED if result of function `r` is greater than 0, other wise FAILED.
 

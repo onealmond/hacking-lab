@@ -1,4 +1,4 @@
-The program ask us to input 10 numbers, then it do calculation with these 10 numbers, check the result with bytes stored in ``match``. Decompile the program with ``r2``, we are able to take a look into how the calculation works. 
+The program asks us to input 10 numbers, then it do calculation with these 10 numbers, check the result with bytes stored in ``match``. Decompile the program with ``r2``, we are able to take a look into how the calculation works. 
 
 
 ```

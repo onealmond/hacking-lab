@@ -1,6 +1,27 @@
 # hacking-lab
 ---
 
+## Pragyan 2021
+- [Guessing Game](pragyan/guessing-game/writeup.md)
+- [Rusty Rev](pragyan/rusty-rev/writeup.md)
+
+## FooBar CTF 2021
+- [Child Rev](foobarctf-2021/child_rev/writeup.md)
+
+## UMassCTF '21
+- [Easteregg](umass21/easteregg/writeup.md)
+- [Chains](umass21/chains/writeup.md)
+- [Hermit Part1](umass21/hermit-part1/writeup.md)
+- [PikCha](umass21/PikCha/writeup.md)
+- [Babushka](umass21/babushka/writeup.md)
+- [Malware](umass21/malware/writeup.md)
+
+## PicoCTF 2020
+- [Guessing Game2](picoctf-2020/guessing-game2/writeup.md)
+- [Web Gauntlet](picoctf-2020/web-gauntlet/writeup.md)
+- [OTP Implementation](picoctf-2020/otp-implementation/writeup.md)
+- [Guessing Game1](picoctf-2020/guessing-game1/writeup.md)
+
 ## Google CTF 2019
 - [JIT](google-ctf-2019/jit/shellcode.py)
 - [Cryptoqkd](google-ctf-2019/cryptoqkd.web.ctfcompetition.com/post.py)
@@ -54,24 +75,3 @@
 - [Cody's First Blog](hacker101-ctf/cody'sFirstBlog/writeup.md)
 - [XSS Playground](hacker101-ctf/XSS-playground/writeup.md)
 - [Grayhatcon](hacker101-ctf/grayhatcon/writeup.md)
-
-## PicoCTF 2020
-- [Guessing Game2](picoctf-2020/guessing-game2/writeup.md)
-- [Web Gauntlet](picoctf-2020/web-gauntlet/writeup.md)
-- [OTP Implementation](picoctf-2020/otp-implementation/writeup.md)
-- [Guessing Game1](picoctf-2020/guessing-game1/writeup.md)
-
-## UMassCTF '21
-- [Easteregg](umass21/easteregg/writeup.md)
-- [Chains](umass21/chains/writeup.md)
-- [Hermit Part1](umass21/hermit-part1/writeup.md)
-- [PikCha](umass21/PikCha/writeup.md)
-- [Babushka](umass21/babushka/writeup.md)
-- [Malware](umass21/malware/writeup.md)
-
-## FooBar CTF
-- [Child Rev](foobar-ctf/child_rev/writeup.md)
-
-## Pragyan 2021
-- [Guessing Game](pragyan/guessing-game/writeup.md)
-- [Rusty Rev](pragyan/rusty-rev/writeup.md)
