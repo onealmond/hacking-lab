@@ -66,6 +66,9 @@
 - [Don't Bump Your Head(er)](ctflearn/Don'tBumpYourHeader/writeup.md)
 - [Inj3ction Time](ctflearn/web8/writeup.md)
 - [Calculat3 M3](ctflearn/web7/writeup.md)
+- [Favorite Color](ctflearn/favorite-color/writeup.md)
+- [Shell Time](ctflearn/shell-time/writeup.md)
+- [Poor Login](ctflearn/poor-login/writeup.md)
 
 ## Hacker101 CTF
 - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)
