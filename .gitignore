@@ -1,4 +1,4 @@
-# Prerequisites
+# Prerequisites                                                                                                                                                [8/1
 *.d
 
 # Compiled Object files
@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+book
+__pycache__
+*.gpr
+*.rep
