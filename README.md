@@ -32,10 +32,14 @@
   - [Dialtone](google-ctf-2019/dialtone/writeup.md)
 
 - _CTFLearn_
+  - [Libraries](ctflearn/libraries/writeup.md)
+  - [Every Bits Counts](ctflearn/every-bits-counts/writeup.md)
+  - [Reverse Me](ctflearn/reverse-me/writeup.md)
+  - [PyDis](ctflearn/py-dis/writeup.md)
+  - [Time to Eat](ctflearn/time-to-eat/writeup.md)
+  - [Poor Login](ctflearn/poor-login/writeup.md)
   - [Favorite Color](ctflearn/favorite-color/writeup.md)
   - [Shell Time](ctflearn/shell-time/writeup.md)
-  - [Poor Login](ctflearn/poor-login/writeup.md)
-  - [Time to Eat](ctflearn/time-to-eat/writeup.md)
 
 - _PicoCTF 2019_
   - [CanaRy](picoctf-2019/CanaRy/shellcode.py)
@@ -81,12 +85,14 @@
   - [Calculat3 M3](ctflearn/web7/writeup.md)
 
 - _Hacker101 CTF_
-  - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)
-  - [Photo Gallery](hacker101-ctf/photo_gallery/writeup.md)
-  - [Postbook](hacker101-ctf/postbook/writeup.md)
-  - [Cody's First Blog](hacker101-ctf/cody'sFirstBlog/writeup.md)
-  - [XSS Playground](hacker101-ctf/XSS-playground/writeup.md)
   - [Grayhatcon](hacker101-ctf/grayhatcon/writeup.md)
+  - [XSS Playground](hacker101-ctf/XSS-playground/writeup.md)
+  - [Cody's First Blog](hacker101-ctf/cody'sFirstBlog/writeup.md)
+  - [Encrypted Pastebin](hacker101-ctf/encrypted-pastebin/writeup.md)
+  - [Photo Gallery](hacker101-ctf/photo-gallery/writeup.md)
+  - [Postbook](hacker101-ctf/postbook/writeup.md)
+  - [Pet Shop](hacker101-ctf/photo-gallery/writeup.md)
+  - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)
 
 ### Crypto
 
@@ -101,7 +107,7 @@
   - [The Numbers](picoctf-2019/the_numbers/writeup.md)
 
 - _Hacker101 CTF_
-  - [Model E1337 Rolling Code Lock](hacker101-ctf/model_e1337_rolling_code_lock/writeup.md)
+  - [Model E1337 Rolling Code Lock](hacker101-ctf/model-e1337-rolling-code-lock/writeup.md)
 
 ### Forensics
 
