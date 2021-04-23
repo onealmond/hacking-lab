@@ -32,8 +32,11 @@
   - [Dialtone](google-ctf-2019/dialtone/writeup.md)
 
 - _CTFLearn_
+  - [Rangoon](ctflearn/rangoon/writeup.md)
+  - [Ramada](ctflearn/ramada/writeup.md)
+  - [Recklinghausen](ctflearn/recklinghausen/writeup.md)
   - [Libraries](ctflearn/libraries/writeup.md)
-  - [Every Bits Counts](ctflearn/every-bits-counts/writeup.md)
+  - [Every Bit Counts](ctflearn/every-bit-counts/writeup.md)
   - [Reverse Me](ctflearn/reverse-me/writeup.md)
   - [PyDis](ctflearn/py-dis/writeup.md)
   - [Time to Eat](ctflearn/time-to-eat/writeup.md)
