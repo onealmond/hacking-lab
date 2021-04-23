@@ -1,7 +1,7 @@
 The program asks us to input 10 numbers, then it do calculation with these 10 numbers, check the result with bytes stored in ``match``. Decompile the program with ``r2``, we are able to take a look into how the calculation works. 
 
 
-```
+```asm
       ...
       0x56383f24c108      488d3df90e00.  lea rdi, str.Enter_10_numbers_to_check_your_luck ; 0x56383f24d008 ; "Enter 10 numbers to check your luck"
       0x56383f24c10f      488d2d160f00.  lea rbp, [0x56383f24d02c] ; " %u"
@@ -49,7 +49,7 @@ The program asks us to input 10 numbers, then it do calculation with these 10 nu
 
 Translate it to psudocode, it gets clearer.
 
-```
+```python
 def forward():
 
     for i in range(16):
@@ -76,7 +76,7 @@ def forward():
 
 ``buf`` stores the 10 numbers from input, ``arr`` above is transformation result from original one, the transformation duplicates the string ``DeltaForce`` three times, so it becomes a string of four ``DeltaForce``, here is the decompiled code snipe from ``ghidra``.
 
-```
+```c
   ...
   i = 10;
   local_20 = *(long *)(in_FS_OFFSET + 0x28);
@@ -89,7 +89,7 @@ def forward():
 
 ``ran`` is a list of random numbers generated from constant seeded ``rand``.
 
-```
+```c
   srand(0xffffff);
   ...
   do {
@@ -106,7 +106,7 @@ def forward():
 
 Now we need to do reverse calculation to find out what number should we input. All calculation is byte level, so ``buf`` need to be an array of size 40.
 
-```
+```python
 ran = [36, 184, 75, 50, 106, 222, 33, 64, 75, 253, 75, 85, 118, 114, 201, 92, 121, 55, 219, 18, 48, 67, 22, 5, 184, 96, 219, 113, 158, 97, 171, 102, 131, 244, 199, 55, 173, 40, 184, 46]
 arr = [ord(c) for c in list(("DeltaForce" * 4))]
 match = [8, 169, 83, 54, 120, 162, 97, 29, 81, 247, 122, 68, 111, 40, 202, 127, 57, 33, 233, 0, 64, 81, 67, 38, 190, 126, 215, 82, 253, 4, 239, 3, 49, 11, 209, 71, 226, 13, 147, 78]
@@ -118,7 +118,7 @@ xmm3 = ran[0:16]
 
 Use ``bytes_to_array`` function to conver byte string of ``match`` to integer array that can be used for calculation.
 
-```
+```python
 def bytes_to_array(dat, sz):
     dat = dat.split()
     arr = []
@@ -132,7 +132,7 @@ match = bytes_to_array(match, 1)
 
 The random byte list can be generated from ``rand`` in glibc with seed ``0xffffff``, or copy from ``r2``.
 
-```
+```asm
 - offset -       0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 0x7ffd22229560  24b8 4b32 6ade 2140 4bfd 4b55 7672 c95c  $.K2j.!@K.KUvr.\
 0x7ffd22229570  7937 db12 3043 1605 b860 db71 9e61 ab66  y7..0C...`.q.a.f
@@ -141,7 +141,7 @@ The random byte list can be generated from ``rand`` in glibc with seed ``0xfffff
 
 According to ``forward`` operations above, here is the reverse operations.
 
-```
+```python
 def reverse():
     xmm0 = [0] * 40
 

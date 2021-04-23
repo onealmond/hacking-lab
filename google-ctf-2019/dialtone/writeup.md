@@ -18,14 +18,15 @@ DTMF keypad frequencies (with sound clips)
 852 Hz    7          8          9          C
 941 Hz    *          0          #          D
 
-```
+```c
 local_c = local_20 << 2 | local_c;
 ```
 
 The lower two bits represent high frequency, the higher two bits represent low freqency.
 
 Take a look at the switch block
-```
+
+```python
 high = [1209, 1336, 1477, 1633]
 low = [697, 770, 852, 941]
 

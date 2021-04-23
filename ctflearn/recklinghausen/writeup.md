@@ -1,8 +1,7 @@
 
 Function ``CheckMsg`` xor the input string with ``msg5`` array, the result is supposed to be equal to ``msg[i+2]``.
 
-
-```
+```c
 undefined8 CheckMsg(char *param_1)
 
 {
@@ -28,7 +27,7 @@ undefined8 CheckMsg(char *param_1)
 
 So we could xor ``msg5[i]`` and ``msg5[i+2]`` to find out value at corresponding position of input string.
 
-```
+```python
 def uncheck():
     buf = [0]*msg5[0]
 
@@ -40,7 +39,7 @@ def uncheck():
 
 The ``msg5`` array could be obtained from ``ghidra``.
 
-```
+```python
 def bytes_to_array(dat, sz):
     dat = dat.split()
     arr = []
@@ -52,7 +51,7 @@ msg5 = "21 7e 3d 2a 38 12 1b 1f 0c 10 05 2c 0b 16 0c 18 1b 0d 0a 0d 0e 17 1b 12 
 msg5 = bytes_to_array(msg5, 1)
 ```
 
-```
+```bash
 ./Recklinghausen `python3 exploit.py`
 Welcome to the Recklinghausen Reversing Challenge!
 Compile Options: ${CMAKE_CXX_FLAGS} -O0 -fno-stack-protector -mno-sse

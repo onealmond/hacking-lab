@@ -2,7 +2,7 @@
 
 The script ``eat.py`` with a lot hard-to-read names, takes a string contains 9 characters as input, ``EAt`` takes two strings to output a final one, which should match *E10a23t9090t9ae0140*.
 
-```
+```python
 def Eating(eat):
     return str(int(eat)*3)
 
@@ -37,7 +37,7 @@ def Ate(eat):
 
 We know that the expected ouput of ``EAt``, we could reverse calculate to find out the two input strings. The first string, let's say ``s1``, is composed with ``str(int(eat[:3])*3)`` and ``eat[::-1]``, the first part is number contains three digits, result of multiply 3 could be the 3-digit number or 4-digit number, the second part is reverse of input string, so we could setup two cases, *---_________* and *----_________*, placeholder *-* for digits and *_* for letters. The second string``s2`` is ``"Eat" + '9' + eat[:3]``, so the placeholder for ``s2`` is *Eat9_________*.
 
-```
+```python
 eateat = EAt(eaT(eat), Ate(eat[::-1]))
 if eateat == "E10a23t9090t9ae0140":
     flag = "eaten_" + eat
@@ -46,7 +46,7 @@ if eateat == "E10a23t9090t9ae0140":
 
 As we have two cases, we would generate two possible strings, we could dump them to the ``eat.py`` script to see which one is correct. Or we can see there are some connection between ``s1`` and ``s2``, they are both using ``eat[::-1]``, so there are part of one should match part of the other. 
 
-```
+```python
 ans = "E10a23t9090t9ae0140"
 
 def exploit(s1):
@@ -77,13 +77,13 @@ if s1[3:6] == s2[-3:]:
 
 By adding the part check, there is only one output.
 
-```
+```bash
 Case1: 341eat009
 ```
 
 Input the result from case1 to ``eat.py`` the flag is printed.
 
-```
+```bash
 python3 eat.py <<< 341eat009
 what's the answer
 1023900tae143 Eat9900

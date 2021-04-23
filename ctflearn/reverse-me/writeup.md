@@ -1,7 +1,7 @@
 
 The program takes 26 bytes of input to encrypt and shuffle it to get another 26 bytes of output, the correct input would make the output match the array ``expected``.
 
-```
+```c
   printf("Enter flag [CTFlearn{ ... }]: ");
   __edflag = (int)register0x00000020 + -0x38;
   __isoc99_scanf(&DAT_00100b87);
@@ -28,7 +28,7 @@ LAB_00100abf:
 
 As we already have the answer, can we reverse each step to find out the correct input?
 
-```
+```c
 void * shuffle(char *param_1) {
   size_t sz;
   void *ret;
@@ -56,7 +56,7 @@ void * shuffle(char *param_1) {
 
 First we unshuffle the expected array.
 
-```
+```python
 def unshuffle(param):
     buf = [0] * len(param)
 
@@ -71,7 +71,7 @@ def unshuffle(param):
 
 This is how it encrypts input. ``uVar2`` variable is not so clear, but check the next step, ``uVar2`` is used to access buffer starts at ``local_48``. 
 
-```
+```c
 void encrypt(char *__block,int __edflag) {
   size_t __size;
   void *pvVar1;
@@ -114,7 +114,7 @@ void encrypt(char *__block,int __edflag) {
 
 Check it out in ``r2``, the index goes in range *0-7*.
 
-```
+```asm
        ╎│   0x55c93e800883      c1ea1d         shr edx, 0x1d
        ╎│   0x55c93e800886      01d0           add eax, edx 
        ╎│   0x55c93e800888      83e007         and eax, 7
@@ -123,7 +123,7 @@ Check it out in ``r2``, the index goes in range *0-7*.
 
 ```
 
-```
+```bash
 Enter flag [CTFlearn{ ... }]: AAAAAAAAAAAAAAAAAAAAAAAAAA
 hit breakpoint at: 0x55c93e80088d
 [0x55c93e80088d]> dr rax
@@ -164,7 +164,7 @@ hit breakpoint at: 0x55c93e80088d
 
 Now we decrypt the unshuffle result to get the input.
 
-```
+```python
 def decrypt(block):
     local_48 = [1,3,3,7, 0xde, 0xad, 0xbe, 0xef]
     buf = [0] * len(block)
@@ -178,7 +178,7 @@ def decrypt(block):
 
 Combine them all together to find out the flag.
 
-```
+```python
 def backward():
     buf = unshuffle(expected)
     buf = decrypt(buf)
@@ -187,12 +187,9 @@ def backward():
 backward()
 ```
 
-```
+```bash
 $ py3 exploit.py | ./reverseme
 Enter flag [CTFlearn{ ... }]: Correct!
-```
-
-```
 $ py3 exploit.py 
 CTFLearn{reversing_is_fun}
 ```

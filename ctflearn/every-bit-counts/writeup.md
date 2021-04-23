@@ -3,7 +3,7 @@ Decompile the program with ``ghidra`` we got a super long ``if-else`` block in *
 
 A simple way to figure out the correct input is to mimic the check process. We only look into those ``!= 0`` part of check, translate it to ``|=`` for corresponding positions. There are 233 of non-zero check by ``greap``.
 
-```
+```c
   unsigned char param[0x34] = {0};
   param[0x24] |= 0x10;
   param[0x2f] |= 0x20;
@@ -17,7 +17,7 @@ A simple way to figure out the correct input is to mimic the check process. We o
 
 In case of missing bytes, we place palceholders for those unset.
 
-```
+```c
   for (int i = 0; i < sizeof(param); ++i) {
     if (param[i] == 0)
       printf("+");
@@ -29,7 +29,7 @@ In case of missing bytes, we place palceholders for those unset.
 
 In this way we got an incomplete output.
 
-```
+```bash
 +WFlearn{w0w_you_f0und_My_fl@g_y0u_Ar3_so_much_n1c3}
 ```
 
@@ -42,7 +42,7 @@ Wow you found my flag!
 
 Here is an interesting solution from CTFLearn community.
 
-```
+```python
 #/usr/bin/env python3
 
 import sys

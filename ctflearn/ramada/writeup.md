@@ -2,7 +2,7 @@
 
 Function ``CheckFlag`` has revealed how the program check the input string. We could mimic each steps on possible characters to find out the flag.
 
-```
+```c
 undefined8 CheckFlag(char *param_1)
 {
   long i;
@@ -19,9 +19,11 @@ undefined8 CheckFlag(char *param_1)
   } while (i != 0x15);
   return 0;
 }
+```
 
 The ``data`` array is initialized as following.
 
+```c
 void InitData(void)
 {
   data._0_4_ = 0x13693;
@@ -51,7 +53,7 @@ void InitData(void)
 
 To find out the actual array at runtime we need to run it in ``gdb`` and dump that region of memory.
 
-```
+```bash
 gef➤  x/21gx $rsi
 0x555555558040 <data>:          0x0006b2c000013693      0x001570000011a9f9
 0x555555558050 <data+16>:       0x001bb5280001cb91      0x000ded21001bb528
@@ -63,7 +65,7 @@ gef➤  x/21gx $rsi
 
 Now we could brute-force all the possibles.
 
-```
+```python
 flag = "CTFlearn{"
 
 candidates = string.ascii_uppercase+string.ascii_lowercase+string.digits+'+'+'_'+'-'
@@ -77,7 +79,7 @@ for i in range(len(data)):
 print(flag+'}')
 ```
 
-```
+```bash
 $ ./Ramada `py3 exploit.py`
 Welcome to the CTFLearn Ramada Reversing Challenge!
 	pid :      30852 0x00007884

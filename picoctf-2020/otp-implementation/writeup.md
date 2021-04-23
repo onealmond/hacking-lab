@@ -1,7 +1,7 @@
  
 Disassemble the program with ``ghidra``, looks like the program take a string as parameter on startup and does some calculation with it, at the end, compares the result with string ``lfmhjmnahapkechbanheabbfjladhbplbnfaijdajpnljecghmoafbljlaamhpaheonlmnpmaddhngbgbhobgnofjgeaomadbidl``, if match the given string is the key, we need to ``xor`` the key with the string in ``flag.txt`` to get the flag.
 
-```
+```c
 ...
 // calculate with the given string
 while( true ) {
@@ -40,7 +40,7 @@ if (i == 100) {
 
 From ``valid_char`` we know that the string should be composed with ``0123456789abcdef``. So we need to guess a 100 bytes string with ``0123456789abcdef``.
 
-```
+```c
 undefined8 valid_char(char param_1)
 {
   undefined8 valid;
@@ -62,7 +62,7 @@ undefined8 valid_char(char param_1)
 
 Each byte is calculated based on the one before it, except the first one. We could generate possible strings and check if the first *n* bytes matchs the first *n* bytes of the target string. Trace the system call of ``strncmp`` we could get the result string.
 
-```
+```bash
 $ ltrace -s 1000 ./otp aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 strncpy(0x7ffe7018cfb0, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 100) = 0x7ffe7018cfb0
 strncmp("fkpejodinchmbglafkpejodinchmbglafkpejodinchmbglafkpejodinchmbglafkpejodinchmbglafkpejodinchmbglafkpe\376\177", "lfmhjmnahapkechbanheabbfjladhbplbnfaijdajpnljecghmoafbljlaamhpaheonlmnpmaddhngbgbhobgnofjgeaomadbidl", 100) = -6
@@ -73,7 +73,7 @@ puts("Invalid key!"Invalid key!
 
 Now we need to parse the output of ``ltrace`` to get the result string, then we compare it with the target string.
 
-```
+```python
 for i in range(target_len):
     for x in sample:
         key[i] = x
@@ -86,6 +86,6 @@ for i in range(target_len):
 
 Finally, ``xor`` the key with ``flag.txt`` to decode the flag.
 
-```
+```python
 ''.join([chr(x^y) for x, y in zip(bytes.fromhex(''.join(key)), bytes.fromhex(flag))])
 ```

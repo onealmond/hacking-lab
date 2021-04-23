@@ -1,7 +1,7 @@
 
 Run ``strings`` on ``childrev``, it shows an interesting message.
 
-```
+```bash
 ...
 $Info: This file is packed with the UPX executable packer http://upx.sf.net $
 ...
@@ -11,7 +11,7 @@ UPX is an open source executable packer, unpack it with ``upx``, now we can get 
 
 Decompile the program in ``ghidra``, it takes user input and the four characters as parameters of ``XOR`` function, if XOR return non-zero result, the input is correct.
 
-```
+```c
 undefined8 main(void)
 {
   undefined local_38 [40];
@@ -41,7 +41,7 @@ undefined8 main(void)
 
 Take a look into ``XOR`` function, it calls ``gen_key``to generate a key from the last four parameters, then ``xor`` the key with the first parameter byte by byte, finally it check whether the result match array ``DAT_0049e060``.
 
-```
+```c
 ulong XOR(long param_1,char param_2,char param_3,char param_4,char param_5)
 {
   ulong key;
@@ -92,7 +92,7 @@ LAB_00401e3c:
 
 The key is generated from "G", "L", "U", "G", so it's constant, by debugging it with ``r2`` we can find out the key is ``0x00012f00``.
 
-```
+```asm
 ...
 0x00401d70      0fbe8da8fdff.  movsx ecx, byte [rbp - 0x258]
 0x00401d77      0fbe95acfdff.  movsx edx, byte [rbp - 0x254]
@@ -104,7 +104,7 @@ The key is generated from "G", "L", "U", "G", so it's constant, by debugging it 
 ...
 ```
 
-```
+```bash
 [0x00401cad]> dc
 hit breakpoint at: 0x401d97
 [0x00401d97]> dr rax
@@ -113,7 +113,7 @@ hit breakpoint at: 0x401d97
 
 Dump ``DAT_0049e060`` block into ``dat``, convert it to int array.
 
-```
+```python
 dat = dat.split()
 arr = []
 
@@ -123,7 +123,7 @@ for i in range(0, len(dat), 8):
 
 So we can ``xor`` the ``arr`` and ``key`` to find out correct input.
 
-```
+```python
 key = 0x00012f00
 flag = [0]*0x22
 
@@ -135,7 +135,7 @@ print(''.join(map(chr, flag)))
 
 Enter the correct flag string, we get the actual flag in the output.
 
-```
+```bash
 $ python3 find_flag.py | ./childrev
 ENTER THE FLAG : YAY U MADE IT
 {flag}

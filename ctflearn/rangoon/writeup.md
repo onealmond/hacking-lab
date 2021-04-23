@@ -3,7 +3,7 @@ The program takes input from command line, which is supposed to be the flag we a
 
 From the check bellow we know the first 9 bytes are *CTFlearn{*, no surprise.
 
-```
+```c
     __s = *(byte **)(argv + 8);
     i = 9;
     pbVar8 = __s;
@@ -20,7 +20,7 @@ From the check bellow we know the first 9 bytes are *CTFlearn{*, no surprise.
 
 Notice that before the final ``strcmp``, there is a test for value in register *r13*, it needs to be *0x1c*, looks like this is the length of the string should be, we need to pass that too.
 
-```
+```asm
     12e7:       49 01 c5                add    %rax,%r13
     12ea:       49 83 fd 1c             cmp    $0x1c,%r13
     12ee:       75 7f                   jne    136f <main+0x22f>
@@ -31,7 +31,7 @@ Notice that before the final ``strcmp``, there is a test for value in register *
 
 Run it in ``gdb`` with test string ``CTFlearn{aaaaaaaaaaaaaaaaaa}``, set a breakpoint at the test before ``strcmp``.
 
-```
+```bash
 $rax   : 0x00005555555580fd  →  0x000000000000007d ("}"?)
 $rbx   : 0xe3
 $rcx   : 0x7d
@@ -53,14 +53,14 @@ $r15   : 0xc
 
 The value in register *r13* is *0x1e*, no pass. But we have a string shown up at register *rbp*, *CTFlearn{Prince_Princess_Devi}*.
 
-```
+```bash
 gef➤  registers $r13
 $r13   : 0x1e 
 ```
 
 If we use ``CTFlearn{Prince_Princess_Devi}``, we are not going to pass the length check, the value in register *r13* becomes *0x21*. We need to try some different strings. Take a look into the following block of code, ``bVar2`` and ``bVar3`` are values at position *0x11* and *0x16*, the later checks indidate they should both be  *0x5f*, underscore.
 
-```
+```c
 ...
 bVar2 = __s[0x11];
 bVar3 = __s[0x16];
@@ -76,13 +76,13 @@ lVar6 = __stpcpy_chk(lVar6 + 1,*(undefined8 *)(i + ((ulong)(bVar3 == 0x5f) * 5 +
 
 With placeholders the input looks likc "CTFlearn{++++++++_++++_++++}".
 
-```
+```c
 People'sSquareandPark.KandawgyiNaturePark.Devi.ShwedagonPagoda.BagoRiver.Thaketa.Maha.AlexanderFraser.Burma.Myanmar.Yangon.Princess.Prince.Queen.Kin
 ```
 
 As the word are picked from program, we rearrange the words and add ``King`` and ``Bago`` to make it up. Input ``CTFlearn{Princess_King_Bago}`` brings us through the length check, another string shown up at address in register *rbp*.
 
-```
+```bash
 $rax   : 0x00005555555580fb  →  0x000000000000007d ("}"?)
 $rbx   : 0xe5
 $rcx   : 0x7d
@@ -104,7 +104,7 @@ $r15   : 0xc
 
 Continue to ``strcmp``, this string looks like what we are looking for and we picked the wrong words before. 
 
-```
+```c
 strcmp@plt (
    $rdi = 0x00007fffffffdfa1 → "CTFlearn{Princess_King_Bago}",
    $rsi = 0x00005555555580e0 → "CTFlearn{Princess_Maha_Devi}",
@@ -115,6 +115,6 @@ strcmp@plt (
 
 Run again with it, yeah, this is our flag.
 
-```
+```bash
 CONGRATULATIONS, you found the flag:  CTFlearn{Princess_Maha_Devi}
 ```

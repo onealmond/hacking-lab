@@ -2,7 +2,8 @@ Sign up with username=gg, password=gg and then sign in with the previous credent
 Try to visit existen posts we figured the url of post seems iterable by changing parameter `id`
 
 Try to access
-```
+
+```html
   http://34.74.105.127/af82d5a390/index.php?page=view.php&id=2
 ```
 It leads us to a private post that contains a flag.

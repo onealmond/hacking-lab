@@ -2,14 +2,14 @@
 
 The program asks us to provide input to recover password. User input go through the following calculation, we need to find out the input that makes the result match array ``EXPECTED``.
 
-```
+```c
 ulong update_crc_32(uint param_1,byte param_2)
 {
   return (ulong)(param_1 >> 8 ^ *(uint *)(crc_tab32 + (ulong)(byte)(param_2 ^ (byte)param_1) * 4));
 }
 ```
 
-```
+```c
   printf("Please provide input to recover your password: ");
   i = 0;
   while ((i < 0x40 && (iVar1 = getchar(), iVar1 != -1))) {
@@ -29,7 +29,7 @@ ulong update_crc_32(uint param_1,byte param_2)
 
 The idea is we minic the process, brute-force to find out the ``0x40`` characters.
 
-```
+```c
 unsigned int update_crc32(unsigned int param1, unsigned char param2) {
     return (unsigned int)((param1 >> 8) ^ crc32_tab[(unsigned char)(param2^(unsigned char)param1)]);
 }
@@ -55,7 +55,7 @@ int main() {
 
 Dumnp the output to ``c0ll1s10ns`` we can finally get the flag.
 
-```
+```bash
 $ g++ recover.cpp && ./a.out |./c0ll1s10ns 
 Please provide input to recover your password: 
 Recovered password: GLSC{hop3_th3r3_w3R3n't_t00_m4ny_c0ll1s10ns_Those_can_be_a_Pa1n}

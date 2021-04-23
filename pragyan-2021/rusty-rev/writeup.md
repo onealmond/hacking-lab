@@ -1,7 +1,7 @@
 
 Connect to the server with ``nc``, we were given an encrypted flag.
 
-```
+```c
 JcOCLQgPJEjwNAZHgVFzAoMVHOiCRVAVKkvFidUvzmUSSnqJzO
 ```
 
@@ -9,7 +9,7 @@ The program used to encrypt the flag is also given. To run it we need to create 
 
 The encrypt flag has length of 50 bytes, possible characters for creating the flag include uppercase and lowercase letters, digits and punctuations, let's try underline and dash first. So we generate the flag file, launch the program to output the encrypt flag, compare the output with the given flag character by character, add it to result list if match.
 
-```
+```python
 enc_flag = 'JcOCLQgPJEjwNAZHgVFzAoMVHOiCRVAVKkvFidUvzmUSSnqJzO'
 flag = []
 pat = re.compile('Flag: (\w+)\n')
