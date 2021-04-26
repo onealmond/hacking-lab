@@ -11,7 +11,7 @@ pLNLKetvAnbu
             KeMиetvAnb u@K0pPKuKrL@@/ $
 ```
 
-Download and decompile *"safe_mod.ko"*, same steps can be found in writeup for [last round](../kernel-module-#2/writeup.md). There two event handlers *device_file_ioctl* and *device_file_read*. take a look into *device_file_ioctl*. *ioctl*, input and output control, is system call to pass control commands and arguments to device driver. *device_file_ioctl* unlocks lock1 with command *0x40087877* and argument *0x45*. Lock3 needs lock1 and lock2 to be unlocked first, passing argument *0x2f* to unlock lock2, lock3 can be unlocked with argument *0x14*.
+Download and decompile *"safe_mod.ko"*, same steps can be found in writeup for [last round](../kernel-module-2/writeup.md). There two event handlers *device_file_ioctl* and *device_file_read*. take a look into *device_file_ioctl*. *ioctl*, input and output control, is system call to pass control commands and arguments to device driver. *device_file_ioctl* unlocks lock1 with command *0x40087877* and argument *0x45*. Lock3 needs lock1 and lock2 to be unlocked first, passing argument *0x2f* to unlock lock2, lock3 can be unlocked with argument *0x14*.
 
 ```c
 undefined8 device_file_ioctl(undefined8 param_1,undefined8 param_2,ulong param_3)
