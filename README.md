@@ -3,6 +3,15 @@
 
 ### Reverse Engineering
 
+- _HeroCTF 2021_
+	- [Kernel Module #3](heroctf-2021/kernel-module-3/writeup.md)
+	- [Kernel Module #2](heroctf-2021/kernel-module-2/writeup.md)
+	- [Kernel Module #1](heroctf-2021/kernel-module-1/writeup.md)
+	- [Win But Twisted](heroctf-2021/win-but-twisted/writeup.md)
+	- [H4XOR](heroctf-2021/h4XOR/writeup.md)
+	- [JNI](heroctf-2021/JNI/writeup.md)
+	- [sELF Control](heroctf-2021/self-control/writeup.md)
+
 - _GLSC CTF 2021_
   - [Collisions](glsc-ctf-2021/collisions/writeup.md)
   - [Scr1pt1ng](glsc-ctf-2021/scr1pt1ng/writeup.md)
@@ -55,7 +64,7 @@
   - [Slippery Shellcode](picoctf-2019/slippery-shellcode/writeup.md)
   - [Messy Malloc](picoctf-2019/messy-malloc/writeup.md)
   - [Leap Frog](picoctf-2019/leap-frog/writeup.md)
-  - [GoT](picoctf-2019/GoT/writeup.md)
+  - [GoT](picoctf-2019/got/writeup.md)
   - [Pointy](picoctf-2019/pointy/writeup.md)
   - [ROP64](picoctf-2019/rop64/shellcode.py)
   - [AfterLife](picoctf-2019/AfterLife/shellcode.py)
@@ -65,6 +74,12 @@
   - [L1m1tL335](picoctf-2019/L1m1tL335/writeup.md)
 
 ### Web
+
+- _HeroCTF 2021_
+	- [You Should Die](heroctf-2021/you-should-die/writeup.md)
+	- [Transfer](heroctf-2021/transfer/writeup.md)
+	- [PwnQL #2](heroctf-2021/pwnQL-2/writeup.md)
+	- [PwnQL #1](heroctf-2021/pwnQL-1/writeup.md)
 
 - _GLSC CTF 2021_
   - [MR. Roboto](glsc-ctf-2021/mr.roboto/writeup.md)
@@ -80,7 +95,7 @@
   - [Cereal Hacker 1](picoctf-2019/cereal-hacker1/writeup.md)
   - [Cereal Hacker 2](picoctf-2019/cereal-hacker2/writeup.md)
   - [Irish-Name-Repo 1](picoctf-2019/Irish-Name-Repo-1/writeup.md)
-  - [Empire 1](picoctf-2019/Empire1/writeup.md)
+  - [Empire 1](picoctf-2019/empire1/writeup.md)
 
 - _CTFLearn_
   - [Don't Bump Your Head(er)](ctflearn/Don'tBumpYourHeader/writeup.md)
@@ -104,10 +119,10 @@
 
 - _PicoCTF 2019_
   - [WhitePages](picoctf-2019/WhitePages/decode.py)
-  - [Mr. WorldWide](picoctf-2019/Mr-WorldWide/writeup.md)
+  - [Mr. WorldWide](picoctf-2019/mr-worldWide/writeup.md)
   - [Caesar](picoctf-2019/caesar/decode.py)
   - [ROT13](picoctf-2019/rot13/writeup.md)
-  - [The Numbers](picoctf-2019/the_numbers/writeup.md)
+  - [The Numbers](picoctf-2019/the-numbers/writeup.md)
 
 - _Hacker101 CTF_
   - [Model E1337 Rolling Code Lock](hacker101-ctf/model-e1337-rolling-code-lock/writeup.md)
@@ -119,5 +134,3 @@
   - [Shark on Wire1](picoctf-2019/shark-on-wire1/writeup.md)
   - [ASM2](picoctf-2019/asm2/writeup.md)
   - [Like1000](picoctf-2019/like1000/writeup.md)
-
-
