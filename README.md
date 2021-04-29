@@ -3,14 +3,14 @@
 
 ### Reverse Engineering
 
-- _HeroCTF 2021_
-	- [Kernel Module #3](heroctf-2021/kernel-module-3/writeup.md)
-	- [Kernel Module #2](heroctf-2021/kernel-module-2/writeup.md)
-	- [Kernel Module #1](heroctf-2021/kernel-module-1/writeup.md)
-	- [Win But Twisted](heroctf-2021/win-but-twisted/writeup.md)
-	- [H4XOR](heroctf-2021/h4XOR/writeup.md)
-	- [JNI](heroctf-2021/JNI/writeup.md)
-	- [sELF Control](heroctf-2021/self-control/writeup.md)
+- _HeroCTF V3_
+	- [Kernel Module #3](heroctf-v3/kernel-module-3/writeup.md)
+	- [Kernel Module #2](heroctf-v3/kernel-module-2/writeup.md)
+	- [Kernel Module #1](heroctf-v3/kernel-module-1/writeup.md)
+	- [Win But Twisted](heroctf-v3/win-but-twisted/writeup.md)
+	- [H4XOR](heroctf-v3/h4XOR/writeup.md)
+	- [JNI](heroctf-v3/JNI/writeup.md)
+	- [sELF Control](heroctf-v3/self-control/writeup.md)
 
 - _GLSC CTF 2021_
   - [Collisions](glsc-ctf-2021/collisions/writeup.md)
@@ -41,6 +41,8 @@
   - [Dialtone](google-ctf-2019/dialtone/writeup.md)
 
 - _CTFLearn_
+  - [Rotterdam](ctflearn/rotterdam/writeup.md)
+  - [Jumper](ctflearn/jumper/writeup.md)
   - [Rangoon](ctflearn/rangoon/writeup.md)
   - [Ramada](ctflearn/ramada/writeup.md)
   - [Recklinghausen](ctflearn/recklinghausen/writeup.md)
@@ -75,11 +77,11 @@
 
 ### Web
 
-- _HeroCTF 2021_
-	- [You Should Die](heroctf-2021/you-should-die/writeup.md)
-	- [Transfer](heroctf-2021/transfer/writeup.md)
-	- [PwnQL #2](heroctf-2021/pwnQL-2/writeup.md)
-	- [PwnQL #1](heroctf-2021/pwnQL-1/writeup.md)
+- _HeroCTF V3_
+	- [You Should Die](heroctf-v3/you-should-die/writeup.md)
+	- [Transfer](heroctf-v3/transfer/writeup.md)
+	- [PwnQL #2](heroctf-v3/pwnQL-2/writeup.md)
+	- [PwnQL #1](heroctf-v3/pwnQL-1/writeup.md)
 
 - _GLSC CTF 2021_
   - [MR. Roboto](glsc-ctf-2021/mr.roboto/writeup.md)
@@ -113,6 +115,12 @@
   - [MicroCMS v2](hacker101-ctf/micro-cms-v2/writeup.md)
 
 ### Crypto
+
+- _CTFLearn_
+  - [AlexCTF CR2 Many Time Secrets](ctflearn/alexctf-cr2-many-time-secrets/writeup.md)
+  - [RSA Beginner](ctflearn/rsa-beginner/decrypt.py)
+  - [RSA Noob](ctflearn/rsa-noob/decrypt.py)
+  - [Substitution](ctflearn/substitution-cipher/substitution.py)
 
 - _Google CTF 2019_
   - [Cryptoqkd](google-ctf-2019/cryptoqkd.web.ctfcompetition.com/post.py)
