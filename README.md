@@ -117,6 +117,11 @@
 ### Crypto
 
 - _CTFLearn_
+  - [Python Reversal](ctflearn/python-reversal/decode.py)
+  - [Tony Stark's Message](ctflearn/tony-stark's-message/writeup.md)
+  - [The Simpsons](ctflearn/the-simpsons/writeup.md)
+  - [Copper RSA Lattice](ctflearn/copper-rsa-lattice/decrypt.py)
+  - [RSA Twins](ctflearn/rsa-twins/decrypt.py)
   - [AlexCTF CR2 Many Time Secrets](ctflearn/alexctf-cr2-many-time-secrets/writeup.md)
   - [RSA Beginner](ctflearn/rsa-beginner/decrypt.py)
   - [RSA Noob](ctflearn/rsa-noob/decrypt.py)
@@ -142,3 +147,6 @@
   - [Shark on Wire1](picoctf-2019/shark-on-wire1/writeup.md)
   - [ASM2](picoctf-2019/asm2/writeup.md)
   - [Like1000](picoctf-2019/like1000/writeup.md)
+
+- _CTFLearn_
+  - [Hisss](ctflearn/hisss/hisss.py)
