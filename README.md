@@ -3,6 +3,11 @@
 
 ### Reverse Engineering
 
+- _DawgCTF 2021_
+  - [Jellypotters](dawgctf-2021/jellypotters/writeup.md)
+  - [Binary Bbomb](dawgctf-2021/binary-bbomb/writeup.md)
+  - [Bofit](dawgctf-2021/bofit/writeup.md)
+
 - _HeroCTF V3_
 	- [Kernel Module #3](heroctf-v3/kernel-module-3/writeup.md)
 	- [Kernel Module #2](heroctf-v3/kernel-module-2/writeup.md)
@@ -41,6 +46,7 @@
   - [Dialtone](google-ctf-2019/dialtone/writeup.md)
 
 - _CTFLearn_
+  - [Weird Calculator](ctflearn/weird-calculator/writeup.md)
   - [Rotterdam](ctflearn/rotterdam/writeup.md)
   - [Jumper](ctflearn/jumper/writeup.md)
   - [Rangoon](ctflearn/rangoon/writeup.md)
@@ -116,7 +122,13 @@
 
 ### Crypto
 
+- _DawgCTF 2021_
+  - [Really Secure Algorithm](dawgctf-2021/really-secure-algorithm/writeup.md)
+  - [The Obligatory RSA](dawgctf-2021/the-obligatory-rsa/writeup.md)
+
 - _CTFLearn_
+  - [Linear-Feedback Shift Register](ctflearn/linear-feedback-shift-register/writeup.md)
+  - [We Want Nudes Instead of Nukes](ctflearn/we-want-nudes-instead-of-nukes/writeup.md)
   - [Python Reversal](ctflearn/python-reversal/decode.py)
   - [Tony Stark's Message](ctflearn/tony-stark's-message/writeup.md)
   - [The Simpsons](ctflearn/the-simpsons/writeup.md)
@@ -149,4 +161,8 @@
   - [Like1000](picoctf-2019/like1000/writeup.md)
 
 - _CTFLearn_
+  - [Corrupted File](ctflearn/corrupted-file/writeup.md)
+  - [F1l3 Mix3r](ctflearn/f1l3-m1x3r/writeup.md)
+  - [Image Magic](ctflearn/image-magic/writeup.md)
+  - [Read In Color](ctflearn/read-in-color/writeup.md)
   - [Hisss](ctflearn/hisss/hisss.py)
