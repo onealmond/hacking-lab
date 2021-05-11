@@ -123,6 +123,8 @@
 ### Crypto
 
 - _DawgCTF 2021_
+  - [Cooking The Ramen](dawgctf-2021/cooking-the-ramen/writeup.md)
+  - [It's Not RSA](dawgctf-2021/it's-not-rsa/writeup.md)
   - [Really Secure Algorithm](dawgctf-2021/really-secure-algorithm/writeup.md)
   - [The Obligatory RSA](dawgctf-2021/the-obligatory-rsa/writeup.md)
 
