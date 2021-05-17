@@ -1,7 +1,17 @@
 ## Hacking Lab
 ---
 
-### Reverse Engineering
+### Binary Exploit
+
+- _DCTF 2021_
+  - [Hotel ROP](dctf-2021/hotel-rop/writeup.md)
+  - [Baby BOF](dctf-2021/baby-bof/writeup.md)
+  - [Bell](dctf-2021/bell/writeup.md)
+  - [Pinch Me](dctf-2021/pinch_me/writeup.md)
+  - [ReadMe](dctf-2021/readme/writeup.md)
+  - [Tiny Interpreter](dctf-2021/tiny-interpreter/writeup.md)
+  - [Just In Time](dctf-2021/just-in-time/writeup.md)
+  - [Pwn Sanity Check](dctf-2021/pwn-sanity-check/writeup.md)
 
 - _DawgCTF 2021_
   - [Jellypotters](dawgctf-2021/jellypotters/writeup.md)
@@ -122,6 +132,10 @@
 
 ### Crypto
 
+- _DCTF 2021_
+  - [Just Take Your Time](dctf-2021/just-take-your-time/writeup.md)
+  - [This One Is Really Basic](dctf-2021/this-one-is-really-basic/writeup.md)
+
 - _DawgCTF 2021_
   - [Cooking The Ramen](dawgctf-2021/cooking-the-ramen/writeup.md)
   - [It's Not RSA](dawgctf-2021/it's-not-rsa/writeup.md)
@@ -163,6 +177,9 @@
   - [Like1000](picoctf-2019/like1000/writeup.md)
 
 - _CTFLearn_
+  - [The Keymaker](ctflearn/the-keymaker/writeup.md)
+  - [Abondoned Street Challenge2](ctflearn/abondoned-street-challenge2/writeup.md)
+  - [Mr. Bin](ctflearn/mr_bin/writeup.md)
   - [Corrupted File](ctflearn/corrupted-file/writeup.md)
   - [F1l3 Mix3r](ctflearn/f1l3-m1x3r/writeup.md)
   - [Image Magic](ctflearn/image-magic/writeup.md)
