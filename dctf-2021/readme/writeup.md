@@ -27,7 +27,7 @@ void vuln(void)
 }
 ```
 
-After severl attemps found the flag located at around "%7$lx" to "%11$lx", so made up the payload as following.
+After severl attemps found the flag located at around "%7$lx" to "%11$lx", so made up the payload as follow.
 
 ```python
 payload = ''
