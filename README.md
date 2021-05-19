@@ -4,6 +4,7 @@
 ### Binary Exploit
 
 - _DCTF 2021_
+  - [Formats Last Theorem](dctf-2021/formats-last-theorem/writeup.md)
   - [Hotel ROP](dctf-2021/hotel-rop/writeup.md)
   - [Baby BOF](dctf-2021/baby-bof/writeup.md)
   - [Bell](dctf-2021/bell/writeup.md)
@@ -133,6 +134,7 @@
 ### Crypto
 
 - _DCTF 2021_
+  - [A Simple SP Box](dctf-2021/a-simple-sp-box/writeup.md)
   - [Just Take Your Time](dctf-2021/just-take-your-time/writeup.md)
   - [This One Is Really Basic](dctf-2021/this-one-is-really-basic/writeup.md)
 
@@ -169,6 +171,9 @@
   - [Model E1337 Rolling Code Lock](hacker101-ctf/model-e1337-rolling-code-lock/writeup.md)
 
 ### Forensics
+
+- _DCTF 2021_
+  - [Forgotten Secret](dctf-2021/forgotten-secret/writeup.md)
 
 - _PicoCTF 2019_
   - [c0rrypt](picoctf-2019/c0rrupt/writeup.md)
