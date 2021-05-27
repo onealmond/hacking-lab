@@ -90,4 +90,4 @@ On success, the server responses the flag.
 {'flag': 'crypto{4u7h3n71c4710n_15_3553n714l}'}
 ```
 
-The full code is [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/flipping_cookie/flipping_cookie.py).
+The full code is [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/flipping-cookie/flipping-cookie.py).

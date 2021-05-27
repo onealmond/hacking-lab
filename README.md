@@ -134,13 +134,13 @@
 ### Crypto
 
 - _CryptoHack_
-  - [Flipping Cookie](cryptohack/flipping_cookie/writeup.md)
-  - [Lazy CBC](cryptohack/lazy_cbc/writeup.md)
-  - [Bean Counter](cryptohack/bean_counter/writeup.md)
+  - [Flipping Cookie](cryptohack/flipping-cookie/writeup.md)
+  - [Lazy CBC](cryptohack/lazy-cbc/writeup.md)
+  - [Bean Counter](cryptohack/bean-counter/writeup.md)
   - [Ctrime](cryptohack/ctrime/writeup.md)
-  - [Triple DES](cryptohack/triple_des/writeup.md)
-  - [ECB Oracle](cryptohack/ecb_oracle/writeup.md)
-  - [Stream Consciousness](cryptohack/stream_consciousness/writeup.md)
+  - [Triple DES](cryptohack/triple-des/writeup.md)
+  - [ECB Oracle](cryptohack/ecb-oracle/writeup.md)
+  - [Stream Consciousness](cryptohack/stream-consciousness/writeup.md)
 
 - _DCTF 2021_
   - [A Simple SP Box](dctf-2021/a-simple-sp-box/writeup.md)

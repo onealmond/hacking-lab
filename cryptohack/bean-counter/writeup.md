@@ -63,4 +63,4 @@ with open('bean_counter.png', 'wb') as fd:
     fd.write(bytes(png))
 ```
 
-The full code is [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/bean_counter/bean_counter.py).
+The full code is [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/bean-counter/bean-counter.py).

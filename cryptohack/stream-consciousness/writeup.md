@@ -171,4 +171,4 @@ guess_next("933709c2cd71a117cfba2ee17618f9e9e5e4afcf12f743cc50f11bb7f530eb1d34d4
 test_key(encrypted_flag, key)
 ```
 
-Full source code can be found [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/stream_consciousness/stream_consciousness.py).
+Full source code can be found [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/stream-consciousness/stream-consciousness.py).

@@ -67,4 +67,4 @@ def bruteforce():
 
 Waited for a while the flag came out to be ``crypto{p3n6u1n5_h473_3cb}``.
 
-The full code is [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/ecb_oracle/ecb_oracle.py).
+The full code is [here](https://github.com/onealmond/hacking-lab/blob/master/cryptohack/ecb-oracle/ecb-oracle.py).
