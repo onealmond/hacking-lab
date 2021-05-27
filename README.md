@@ -133,6 +133,15 @@
 
 ### Crypto
 
+- _CryptoHack_
+  - [Flipping Cookie](cryptohack/flipping_cookie/writeup.md)
+  - [Lazy CBC](cryptohack/lazy_cbc/writeup.md)
+  - [Bean Counter](cryptohack/bean_counter/writeup.md)
+  - [Ctrime](cryptohack/ctrime/writeup.md)
+  - [Triple DES](cryptohack/triple_des/writeup.md)
+  - [ECB Oracle](cryptohack/ecb_oracle/writeup.md)
+  - [Stream Consciousness](cryptohack/stream_consciousness/writeup.md)
+
 - _DCTF 2021_
   - [A Simple SP Box](dctf-2021/a-simple-sp-box/writeup.md)
   - [Just Take Your Time](dctf-2021/just-take-your-time/writeup.md)
@@ -182,6 +191,7 @@
   - [Like1000](picoctf-2019/like1000/writeup.md)
 
 - _CTFLearn_
+  - [Jakarta](ctflearn/jakarta/writeup.md)
   - [The Keymaker](ctflearn/the-keymaker/writeup.md)
   - [Abondoned Street Challenge2](ctflearn/abondoned-street-challenge2/writeup.md)
   - [Mr. Bin](ctflearn/mr_bin/writeup.md)
