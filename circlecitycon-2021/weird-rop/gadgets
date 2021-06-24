@@ -1,0 +1,145 @@
+Gadgets information
+============================================================
+0x000000000040105f : adc al, 3 ; add byte ptr [rax], al ; ret
+0x00000000004010d7 : add al, byte ptr [rax] ; add bl, al ; syscall
+0x0000000000401085 : add al, byte ptr [rax] ; add bl, al ; xor rdi, 0x1d ; ret
+0x0000000000401078 : add al, byte ptr [rax] ; add bl, al ; xor rdi, 0x53 ; ret
+0x0000000000401127 : add al, byte ptr [rax] ; add byte ptr [rax], al ; syscall
+0x0000000000401008 : add bl, al ; mov rax, 1 ; ret
+0x0000000000401010 : add bl, al ; mov rdi, 1 ; ret
+0x00000000004010d9 : add bl, al ; syscall
+0x00000000004010a9 : add bl, al ; xor rdi, 0x16b ; ret
+0x000000000040102a : add bl, al ; xor rdi, 0x188 ; ret
+0x00000000004010c1 : add bl, al ; xor rdi, 0x198 ; ret
+0x000000000040104a : add bl, al ; xor rdi, 0x19b ; ret
+0x00000000004010c9 : add bl, al ; xor rdi, 0x1a3 ; ret
+0x0000000000401087 : add bl, al ; xor rdi, 0x1d ; ret
+0x0000000000401032 : add bl, al ; xor rdi, 0x1e5 ; ret
+0x00000000004010b1 : add bl, al ; xor rdi, 0x1f4 ; ret
+0x0000000000401052 : add bl, al ; xor rdi, 0x237 ; ret
+0x0000000000401072 : add bl, al ; xor rdi, 0x281 ; ret
+0x00000000004010a1 : add bl, al ; xor rdi, 0x28e ; ret
+0x00000000004010d1 : add bl, al ; xor rdi, 0x29a ; ret
+0x000000000040106a : add bl, al ; xor rdi, 0x2b3 ; ret
+0x0000000000401042 : add bl, al ; xor rdi, 0x30c ; ret
+0x000000000040105a : add bl, al ; xor rdi, 0x314 ; ret
+0x000000000040103a : add bl, al ; xor rdi, 0x355 ; ret
+0x00000000004010b9 : add bl, al ; xor rdi, 0x3ab ; ret
+0x000000000040107a : add bl, al ; xor rdi, 0x53 ; ret
+0x0000000000401018 : add bl, al ; xor rdi, 0x56 ; ret
+0x0000000000401094 : add bl, al ; xor rdi, 0x6f ; ret
+0x0000000000401062 : add bl, al ; xor rdi, 0xc1 ; ret
+0x00000000004010fd : add byte ptr [rax - 0x39], cl ; ret 0
+0x0000000000401016 : add byte ptr [rax], al ; add bl, al ; xor rdi, 0x56 ; ret
+0x00000000004010fb : add byte ptr [rax], al ; add byte ptr [rax - 0x39], cl ; ret 0
+0x000000000040114a : add byte ptr [rax], al ; add byte ptr [rax], al ; add rsp, 0x10 ; pop rbp ; ret
+0x0000000000401005 : add byte ptr [rax], al ; add byte ptr [rax], al ; ret
+0x0000000000401101 : add byte ptr [rax], al ; add byte ptr [rax], al ; syscall
+0x000000000040114c : add byte ptr [rax], al ; add rsp, 0x10 ; pop rbp ; ret
+0x000000000040115e : add byte ptr [rax], al ; mov rdi, 0 ; syscall
+0x00000000004010fc : add byte ptr [rax], al ; mov rdx, 0 ; syscall
+0x0000000000401007 : add byte ptr [rax], al ; ret
+0x0000000000401103 : add byte ptr [rax], al ; syscall
+0x0000000000401092 : add dword ptr [rax], eax ; add bl, al ; xor rdi, 0x6f ; ret
+0x000000000040100d : add dword ptr [rax], eax ; add byte ptr [rax], al ; ret
+0x0000000000401077 : add dword ptr [rdx], 0x48c30000 ; xor edi, 0x53 ; ret
+0x000000000040114f : add esp, 0x10 ; pop rbp ; ret
+0x000000000040114e : add rsp, 0x10 ; pop rbp ; ret
+0x0000000000401141 : enter 0, 0 ; syscall
+0x00000000004010ad : imul dword ptr [rbx + 1] ; add byte ptr [rax], al ; ret
+0x0000000000401037 : in eax, 1 ; add byte ptr [rax], al ; ret
+0x0000000000401084 : je 0x40108c ; add byte ptr [rax], al ; ret
+0x000000000040106f : mov bl, 2 ; add byte ptr [rax], al ; ret
+0x000000000040102f : mov byte ptr [rcx], al ; add byte ptr [rax], al ; ret
+0x0000000000401003 : mov eax, 0 ; ret
+0x000000000040100b : mov eax, 1 ; ret
+0x0000000000401161 : mov edi, 0 ; syscall
+0x0000000000401013 : mov edi, 1 ; ret
+0x00000000004010ff : mov edx, 0 ; syscall
+0x000000000040113f : mov edx, 0xc8 ; syscall
+0x0000000000401125 : mov edx, 2 ; syscall
+0x00000000004010a6 : mov es, word ptr [rdx] ; add byte ptr [rax], al ; ret
+0x000000000040113c : mov esi, esp ; mov rdx, 0xc8 ; syscall
+0x0000000000401122 : mov esi, esp ; mov rdx, 2 ; syscall
+0x0000000000401002 : mov rax, 0 ; ret
+0x000000000040100a : mov rax, 1 ; ret
+0x0000000000401160 : mov rdi, 0 ; syscall
+0x0000000000401012 : mov rdi, 1 ; ret
+0x00000000004010fe : mov rdx, 0 ; syscall
+0x000000000040113e : mov rdx, 0xc8 ; syscall
+0x0000000000401124 : mov rdx, 2 ; syscall
+0x00000000004010d5 : neg dword ptr [rdx - 0x3cfffffe] ; syscall
+0x000000000040103e : not dword ptr [rbp + 3] ; add byte ptr [rax], al ; ret
+0x000000000040105e : not dword ptr [rbx + rax] ; add byte ptr [rax], al ; ret
+0x000000000040101c : not dword ptr [rsi - 0x3d] ; xor rdi, 0x25 ; ret
+0x0000000000401047 : or al, 3 ; add byte ptr [rax], al ; ret
+0x000000000040113d : out 0x48, al ; mov edx, 0xc8 ; syscall
+0x0000000000401123 : out 0x48, al ; mov edx, 2 ; syscall
+0x0000000000401099 : outsd dx, dword ptr [rsi] ; ret
+0x0000000000401152 : pop rbp ; ret
+0x00000000004010de : pop rdx ; ret
+0x0000000000401000 : pop rsi ; ret
+0x000000000040107f : push rbx ; ret
+0x000000000040101d : push rsi ; ret
+0x0000000000401001 : ret
+0x0000000000401100 : ret 0
+0x0000000000401140 : ret 0xc8
+0x0000000000401126 : ret 2
+0x0000000000401004 : rol byte ptr [rax], 0 ; add byte ptr [rax], al ; ret
+0x000000000040100c : rol byte ptr [rcx], 0 ; add byte ptr [rax], al ; ret
+0x00000000004010db : syscall
+0x0000000000401091 : test eax, 0xc3000001 ; xor rdi, 0x6f ; ret
+0x00000000004010ac : xor edi, 0x16b ; ret
+0x000000000040102d : xor edi, 0x188 ; ret
+0x00000000004010c4 : xor edi, 0x198 ; ret
+0x000000000040104d : xor edi, 0x19b ; ret
+0x00000000004010cc : xor edi, 0x1a3 ; ret
+0x000000000040108f : xor edi, 0x1a9 ; ret
+0x000000000040108a : xor edi, 0x1d ; ret
+0x0000000000401035 : xor edi, 0x1e5 ; ret
+0x00000000004010b4 : xor edi, 0x1f4 ; ret
+0x0000000000401055 : xor edi, 0x237 ; ret
+0x0000000000401020 : xor edi, 0x25 ; ret
+0x0000000000401082 : xor edi, 0x274 ; ret
+0x0000000000401075 : xor edi, 0x281 ; ret
+0x00000000004010a4 : xor edi, 0x28e ; ret
+0x00000000004010d4 : xor edi, 0x29a ; ret
+0x000000000040106d : xor edi, 0x2b3 ; ret
+0x0000000000401045 : xor edi, 0x30c ; ret
+0x000000000040105d : xor edi, 0x314 ; ret
+0x0000000000401025 : xor edi, 0x32e ; ret
+0x000000000040103d : xor edi, 0x355 ; ret
+0x00000000004010bc : xor edi, 0x3ab ; ret
+0x000000000040109c : xor edi, 0x3cd ; ret
+0x000000000040107d : xor edi, 0x53 ; ret
+0x000000000040101b : xor edi, 0x56 ; ret
+0x0000000000401097 : xor edi, 0x6f ; ret
+0x0000000000401065 : xor edi, 0xc1 ; ret
+0x00000000004010ab : xor rdi, 0x16b ; ret
+0x000000000040102c : xor rdi, 0x188 ; ret
+0x00000000004010c3 : xor rdi, 0x198 ; ret
+0x000000000040104c : xor rdi, 0x19b ; ret
+0x00000000004010cb : xor rdi, 0x1a3 ; ret
+0x000000000040108e : xor rdi, 0x1a9 ; ret
+0x0000000000401089 : xor rdi, 0x1d ; ret
+0x0000000000401034 : xor rdi, 0x1e5 ; ret
+0x00000000004010b3 : xor rdi, 0x1f4 ; ret
+0x0000000000401054 : xor rdi, 0x237 ; ret
+0x000000000040101f : xor rdi, 0x25 ; ret
+0x0000000000401081 : xor rdi, 0x274 ; ret
+0x0000000000401074 : xor rdi, 0x281 ; ret
+0x00000000004010a3 : xor rdi, 0x28e ; ret
+0x00000000004010d3 : xor rdi, 0x29a ; ret
+0x000000000040106c : xor rdi, 0x2b3 ; ret
+0x0000000000401044 : xor rdi, 0x30c ; ret
+0x000000000040105c : xor rdi, 0x314 ; ret
+0x0000000000401024 : xor rdi, 0x32e ; ret
+0x000000000040103c : xor rdi, 0x355 ; ret
+0x00000000004010bb : xor rdi, 0x3ab ; ret
+0x000000000040109b : xor rdi, 0x3cd ; ret
+0x000000000040107c : xor rdi, 0x53 ; ret
+0x000000000040101a : xor rdi, 0x56 ; ret
+0x0000000000401096 : xor rdi, 0x6f ; ret
+0x0000000000401064 : xor rdi, 0xc1 ; ret
+
+Unique gadgets found: 141
