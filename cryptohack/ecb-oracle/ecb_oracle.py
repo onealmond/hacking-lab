@@ -17,7 +17,7 @@ def print_blk(hex_blks, sz):
 def bruteforce():
     flag = ''
     total = 32 - 1
-    alphabet = '_'+'@'+'}'+string.digits+string.ascii_lowercase+string.ascii_uppercase
+    alphabet = '_'+'@'+'{'+'}'+string.digits+string.ascii_lowercase+string.ascii_uppercase
 
     while True:
         payload = '1' * (total-len(flag))
